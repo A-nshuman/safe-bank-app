@@ -725,7 +725,7 @@ class WelcomeScreen(Screen):
 
 class LoginScreen(Screen):
     def login_info(self):
-        self.url = "https://myapp-data-f2c21-default-rtdb.firebaseio.com/.json"
+        self.url = ""
         log_email = self.ids.log_email.text
         log_pass = self.ids.log_pass.text
         self.helper = Builder.load_string(username_helper)
@@ -762,7 +762,7 @@ class LoginScreen(Screen):
                             MDRaisedButton(text="CLOSE", on_release=self.close_dial),
                             ])
             self.user_dialog.open()
-    auth = 'i7pVzE2g7Ep6sWsHkaNPSowfyfIs7peOPFG86EEA'
+    auth = ''
     
     def close_dial(self, obj):
         self.user_dialog.dismiss()
@@ -770,7 +770,7 @@ class LoginScreen(Screen):
 
 class RegisterScreen(Screen):
     def register_info(self):
-        self.url = "https://myapp-data-f2c21-default-rtdb.firebaseio.com/.json"
+        self.url = ""
         reg_name_first = self.ids.reg_name_first.text
         reg_name_last = self.ids.reg_name_last.text
         reg_name_user = self.ids.reg_name_user.text
@@ -1060,7 +1060,7 @@ class DemoApp(MDApp):
         self.theme_cls.primary_hue = "A700"
         self.theme_cls.theme_style = "Dark"
         self.helper = Builder.load_string(username_helper)
-        self.url = "https://myapp-data-f2c21-default-rtdb.firebaseio.com/"
+        self.url = ""
         return self.helper
 
     def theme_ch(self):
